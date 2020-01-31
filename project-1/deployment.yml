@@ -30,7 +30,7 @@
       rules:
         - name: SSH
           protocol: Tcp
-          destination_port_range: 1328
+          destination_port_range: 1329
           access: Allow
-          priority: 5001
-          direction: Inbound
+          priority: 1001
+          direction: Outbound
