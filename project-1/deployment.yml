@@ -23,4 +23,14 @@
       name: dbSubnet
       address_prefix: "10.0.2.0/24"
       virtual_network: myVnet
-
+  - name: Create Network Security Group that allows SSH
+    azure_rm_securitygroup:
+      resource_group: myResourceGroup
+      name: myNetworkSecurityGroup
+      rules:
+        - name: SSH
+          protocol: Tcp
+          destination_port_range: 1328
+          access: Allow
+          priority: 1001
+          direction: Outbound
