@@ -32,5 +32,5 @@
           protocol: Tcp
           destination_port_range: 1328
           access: Allow
-          priority: 1001
-          direction: Outbound
+          priority: 5001
+          direction: Inbound
