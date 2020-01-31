@@ -17,4 +17,10 @@
       name: webSubnet
       address_prefix: "10.0.1.0/24"
       virtual_network: myVnet
+  - name: Add subnet
+    azure_rm_subnet:
+      resource_group: myResourceGroup
+      name: dbSubnet
+      address_prefix: "10.0.2.0/24"
+      virtual_network: myVnet
 
