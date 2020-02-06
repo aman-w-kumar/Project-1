@@ -4,33 +4,23 @@
   tasks:
   - name: Create resource group
     azure_rm_resourcegroup:
-      name: myResourceGroup
+      name: app-vNet-rg
       location: eastus
   - name: Create virtual network
     azure_rm_virtualnetwork:
-      resource_group: myResourceGroup
-      name: myVnet
-      address_prefixes: "10.0.0.0/16"
+      resource_group: app-vNet-rg
+      name: app-eus-vNet
+      address_prefixes: "10.10.0.0/16"
   - name: Add subnet
     azure_rm_subnet:
-      resource_group: myResourceGroup
-      name: webSubnet
-      address_prefix: "10.0.1.0/24"
-      virtual_network: myVnet
+      resource_group: app-vNet-rg
+      name: Frontend
+      address_prefix: "10.10.2.0/24"
+      virtual_network: app-eus-vNet
   - name: Add subnet
     azure_rm_subnet:
-      resource_group: myResourceGroup
-      name: dbSubnet
-      address_prefix: "10.0.2.0/24"
-      virtual_network: myVnet
-  - name: Create Network Security Group that allows SSH
-    azure_rm_securitygroup:
-      resource_group: myResourceGroup
-      name: myNetworkSecurityGroup
-      rules:
-        - name: SSH
-          protocol: Tcp
-          destination_port_range: 1329
-          access: Allow
-          priority: 1001
-          direction: Outbound
+      resource_group: app-vNet-rg
+      name: Backend
+      address_prefix: "10.10.4.0/24"
+      virtual_network: app-eus-vNet
+      service_endpoints: Microsoft.storage
