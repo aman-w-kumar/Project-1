@@ -23,4 +23,4 @@
       name: Backend
       address_prefix: "10.10.4.0/24"
       virtual_network: app-eus-vNet
-      service_endpoints: Microsoft.storage
+      
