@@ -11,7 +11,8 @@
       resource_group: app-vNet-rg
       name: app-eus-vNet
       address_prefixes: "10.10.0.0/16"
-      service_endpoints: Microsoft.storage
+    serviceEndpoints:
+      service: Microsoft.Storage
   - name: Add subnet
     azure_rm_subnet:
       resource_group: app-vNet-rg
