@@ -17,8 +17,10 @@
       name: Frontend
       address_prefix: "10.10.2.0/24"
       virtual_network: app-eus-vNet
-      service_endpoints:
-          service: "Microsoft.Storage"
+    serviceEndpoints:
+    - service: Microsoft.Storage
+      locations:
+      - eastus
   - name: Add subnet
     azure_rm_subnet:
       resource_group: app-vNet-rg
