@@ -6,7 +6,7 @@
     azure_rm_storageaccount:
       resource_group: app-vNet-rg
       name: clh00029909
-      type: Standard_LRS
+      type: Standard_RAGRS
       tags:
         testing: testing
         delete: on-exit
