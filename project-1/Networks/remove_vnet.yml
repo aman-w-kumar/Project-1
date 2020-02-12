@@ -1,0 +1,9 @@
+  - name: Delete a virtual network
+    azure_rm_virtualnetwork:
+      resource_group: myResourceGroup
+      name: myVnet
+      state: absent
+  - name: Delete a NSG rule
+    azure_rm_securitygroup:
+      resource_group: myResourceGroup
+      
