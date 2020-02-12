@@ -10,3 +10,4 @@
       tags:
         testing: testing
         delete: on-exit
+        purpose: sql-backup
