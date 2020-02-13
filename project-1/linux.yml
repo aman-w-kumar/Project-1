@@ -1,6 +1,6 @@
 - name: Ensure Apache installed
   hosts: linux-servers
   connection: local
-- name: install the latest version of httpd
+- name: install the latest version of apache
   yum:
     name: httpd
