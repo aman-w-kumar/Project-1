@@ -1,9 +1,0 @@
-- name: Install nginx packages
-  hosts: localhost
-  connection: remote
-  tasks:
-- name: Ensure nginx packages are present
-yum:
-  name: nginx, python-pip, python-devel, devel
-  state: present
-notify: restart-nginx-service
