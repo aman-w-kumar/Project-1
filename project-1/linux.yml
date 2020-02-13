@@ -2,7 +2,7 @@
   # This playbook runs a basic DF command.
   
    - hosts: all
-
+    #remote_user: root
   
      tasks:
      - package: name=httpd state=latest
