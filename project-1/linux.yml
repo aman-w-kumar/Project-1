@@ -1,12 +1,9 @@
-- name: install the latest version of Apache
-  yum:
-    name: httpd
-    state: latest
-
-- name: ensure a list of packages installed
-  yum:
-    name: "{{ packages }}"
-  vars:
-    packages:
-    - httpd
-    - httpd-tools
+---
+  # This playbook runs a basic DF command.
+  
+   - hosts: server1
+     #remote_user: root
+  
+     tasks:
+      - name: install yum package
+        command: yum install httpd -y  
