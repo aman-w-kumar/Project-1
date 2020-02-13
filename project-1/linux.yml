@@ -1,12 +1,12 @@
 ---
   # This playbook runs a basic DF command.
   
-   - hosts: all
-        #remote_user: root
+   - hosts:
+          linuxservers
+     #remote_user: root
   
      tasks:
-      - name: install yum package
-        yum:
-          name: httpd
-          state: latest
+     - package: name=httpd state=latest
+       become: yes
+  
   
