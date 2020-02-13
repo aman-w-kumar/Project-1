@@ -1,9 +1,8 @@
 ---
   # This playbook runs a basic DF command.
   
-   - hosts:
-          linuxservers
-     #remote_user: root
+   - hosts: all
+
   
      tasks:
      - package: name=httpd state=latest
