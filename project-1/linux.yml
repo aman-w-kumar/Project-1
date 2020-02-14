@@ -1,9 +1,6 @@
 #ping
 ---
 - hosts: all
-  #connection: remote 
-  #remote_user: vmadmin
-  gather_facts: false
   tasks:
     - name: pinging myhost
       action: ping
