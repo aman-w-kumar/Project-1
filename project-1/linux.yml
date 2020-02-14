@@ -1,5 +1,5 @@
 ---
-- hosts: linux-servers
+- hosts: server1
   become: yes
   tasks:
   - name: Install packages
