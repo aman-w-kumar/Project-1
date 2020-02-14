@@ -1,7 +1,8 @@
 ---
 - name: new connection
-  connection: local
-- hosts: linuxservers
+ # connection: local
+- hosts: 
+     linuxservers
   become: yes
   tasks:
   - name: Install packages
