@@ -4,4 +4,9 @@
   tasks:
     - name: pinging myhost
       action: ping
+    - name: installing nginx
+      package: name=httpd state=latest
+      become: yes
+    - name: checking if pkg is installed
+      command: dpkg -S httpd
 
