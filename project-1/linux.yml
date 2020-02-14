@@ -1,6 +1,7 @@
 #ping
 ---
 - hosts: myhost
+  connection: local
   gather_facts: false
   tasks:
     - name: pinging myhost
