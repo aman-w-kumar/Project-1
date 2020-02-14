@@ -1,13 +1,6 @@
+#ping 
 ---
-- name: new connection
- # connection: local
-- hosts: 
-     linuxservers
-  become: yes
-  tasks:
-  - name: Install packages
-    apt:
-      name:
-      - nginx
-      state: latest
-      cache_valid_time: 3600
+  - hosts: all
+    tasks:
+    - name: pinging all servers
+      action: ping
