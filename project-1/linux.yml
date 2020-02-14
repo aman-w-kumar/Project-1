@@ -1,6 +1,7 @@
 #ping 
 ---
   - hosts: linuxservers
+    gather_facts: false
     tasks:
     - name: pinging all servers
-      command: ping
+      action: ping
