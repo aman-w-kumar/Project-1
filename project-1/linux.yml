@@ -1,7 +1,6 @@
 #ping
 ---
-- hosts: 
-     server1
+- hosts: all
   #connection: local 
   #remote_user: vmadmin
   gather_facts: false
