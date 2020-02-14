@@ -1,6 +1,6 @@
 #ping 
 ---
-  - hosts: all
+  - hosts: linuxservers
     tasks:
     - name: pinging all servers
       command: ping
