@@ -4,8 +4,8 @@
   tasks:
     - name: pinging myhost
       action: ping
-    - name: installing yum
-      package: name=yum state=latest
+    - name: installing nginx
+      package: name=nginx, python-pip, python-devel, devel state=latest
       become: yes
 
 
