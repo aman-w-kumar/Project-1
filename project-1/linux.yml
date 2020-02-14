@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: linux-servers
   become: yes
   tasks:
   - name: Install packages
