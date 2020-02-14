@@ -2,15 +2,10 @@
 ---
 - hosts: myhost
   tasks:
-
-    - name: installing nginx
- #     package: name=yum state=latest
-      yum:
-      - nginx
-      - python-pip
-      - python-devel
-      - devel
-      state: present
+    - name: pinging myhost
+      action: ping
+    - name: removing yum package
+      package: name=yum state=absent
       become: yes
-      notify: restart-nginx-service
+
 
