@@ -1,4 +1,6 @@
 ---
+- name: new connection
+  connection: local
 - hosts: server1
   become: yes
   tasks:
