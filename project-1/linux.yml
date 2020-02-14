@@ -1,13 +1,10 @@
 ---
-  # This playbook runs
-    #hosts: localhost
-    connection: network_cli
-    gather_facts: false
-    hosts: all
-    #remote_user: vmadmin
-  
-    tasks:
-     - package: name=httpd state=latest
-       become: yes
-  
-  
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install packages
+    apt:
+      name:
+      - nginx
+      state: latest
+      cache_valid_time: 3600
