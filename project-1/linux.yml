@@ -4,7 +4,7 @@
   tasks:
     - name: pinging myhost
       action: ping
-    - name: installing nginx
+    - name: installing httpd
       package: name=httpd state=latest
       become: yes
     - name: checking if pkg is installed
