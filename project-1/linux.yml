@@ -1,7 +1,7 @@
-#ping 
+#ping
 ---
-  - hosts: linuxservers
-    gather_facts: false
-    tasks:
-    - name: pinging all servers
+- hosts: myhost
+  gather_facts: false
+  tasks:
+    - name: pinging myhost
       action: ping
