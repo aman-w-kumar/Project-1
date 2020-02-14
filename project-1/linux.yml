@@ -1,6 +1,6 @@
 #ping
 ---
-- hosts: all
+- hosts: myhost
   tasks:
     - name: pinging myhost
       action: ping
