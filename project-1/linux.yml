@@ -4,8 +4,8 @@
   tasks:
     - name: pinging myhost
       action: ping
-    - name: removing yum package
-      package: name=yum state=absent
+    - name: installing apache package
+      package: name=apache2 state=latest
       become: yes
 
 
