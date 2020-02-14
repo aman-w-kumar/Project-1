@@ -1,6 +1,6 @@
 #ping
 ---
-- hosts: "172.10.0.5"
+- hosts: server1
   tasks:
     - name: pinging myhost
       action: ping
