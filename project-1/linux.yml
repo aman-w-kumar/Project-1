@@ -3,4 +3,4 @@
   - hosts: all
     tasks:
     - name: pinging all servers
-      action: ping
+      command: ping
