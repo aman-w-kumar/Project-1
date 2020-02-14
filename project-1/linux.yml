@@ -4,4 +4,5 @@
   tasks:
     - name: pinging myhost
       action: ping
+    - name: getting uptime
       command: uptime
