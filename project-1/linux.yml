@@ -2,6 +2,7 @@
 ---
 - hosts: myhost
   #connection: local or remote doesn't matter
+  remote_user: vmadmin
   gather_facts: false
   tasks:
     - name: pinging myhost
