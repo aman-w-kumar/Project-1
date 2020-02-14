@@ -1,9 +1,7 @@
 #ping
 ---
-all:
-- hosts:
-      myhost
-  connection: local 
+- hosts: all
+  #connection: remote 
   #remote_user: vmadmin
   gather_facts: false
   tasks:
