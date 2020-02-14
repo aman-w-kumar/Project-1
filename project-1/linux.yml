@@ -2,8 +2,7 @@
 ---
 - hosts: myhost
   tasks:
-    - name: pinging myhost
-      action: ping
+
     - name: installing nginx
  #     package: name=yum state=latest
       yum:
