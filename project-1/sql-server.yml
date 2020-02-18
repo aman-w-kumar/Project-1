@@ -9,7 +9,7 @@
 - hosts : localhost
 #roles
   vars:
-    resource_group : "{{ rgDB }}"
+    resource_group : rgDB
     location: eastus
     mysqlservername: mysql{{ prefix }}
     mysqldbname : mysqldb{{ prefix }}
