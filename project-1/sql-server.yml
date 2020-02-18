@@ -9,9 +9,9 @@
 - hosts : localhost
 #roles
   vars:
-    resource_group : rgDB
-    location: eastus
-    mysqlservername: mysql{{ - }}{{ prefix }}
+    resource_group : rgDBeurope
+    location: westeurope
+    mysqlservername: mysql{{ prefix }}
     mysqldbname : mysqldb{{ prefix }}
     admin_username: dbadmin
     admin_password: DBbadmin12345~!%$
@@ -27,8 +27,8 @@
         location: "{{ location }}"
         admin_username: "{{ admin_username }}"
         admin_password: "{{ admin_password }}"
-        api_profile: 
-                  Default:Latest
+        
+                  
     - name: create a sql database
       azure_rm_sqldatabase:
         resource_group : "{{ resource_group }}"
