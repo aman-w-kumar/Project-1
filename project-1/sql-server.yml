@@ -1,0 +1,43 @@
+#description 
+#  creating a new sql server
+- hosts: localhost
+  tasks:
+    - name: prepare random string
+      set_fact:
+        prefix: "{{ 1000 | random }}"
+      run_once: yes
+- hosts : localhost
+#roles
+  vars:
+    resource_group : "{{ rgDB }}"
+    location: eastus
+    mysqlservername: mysql{{ prefix }}
+    mysqldbname : mysqldb{{ prefix }}
+    admin_username: dbadmin
+    admin_password: DBbadmin12345~!%$
+  tasks:
+    - name: create a resource group
+      azure_rm_resourcegroup: 
+        name: "{{resource_group}}"
+        location: "{{ location }}"
+    - name: create a sql server
+      azure_rm_sqlserver:
+        resource_group: "{{ resource_group }}"
+        name: "{{ mysqlservername }}"
+        sku:
+          name: GP_Gen4_2
+          tier: GeneralPurpose
+        location: "{{ location }}"
+        version: 5.6
+        enforce_ssl: false
+        admin_username: "{{ admin_username }}"
+        admin_password: "{{ admin_password }}"
+        storage_mb: 51200
+    - name: create a sql database
+      azure_rm_sqldatabase:
+        resource_group : "{{ resource_group }}"
+        server_name: "{{ mysqlservername }}"
+        name: "{{ mysqldbname }}"
+
+
+
