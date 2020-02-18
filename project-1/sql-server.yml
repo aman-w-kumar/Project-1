@@ -18,7 +18,7 @@
   tasks:
     - name: create a resource group
       azure_rm_resourcegroup: 
-        name: "{{resource_group}}"
+        name: "{{ resource_group }}"
         location: "{{ location }}"
     - name: create a sql server
       azure_rm_sqlserver:
