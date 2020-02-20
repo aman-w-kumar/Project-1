@@ -1,15 +1,15 @@
-- name: Create custom role defination task
-  hosts: localhost
+- hosts: localhost
   connection: local
   tasks:
-- name: Create a role definition
-  azure_rm_roledefinition:
-    name: VirtualmachineReader
-    scope: /subscriptions/3e93f1df-e6b0-4b70-a59d-e42f3becf381/resourceGroups/Migration-RG
-    permissions:
-        - actions:
-            - "Microsoft.Compute/virtualMachines/read"
-          data_actions:
-            - "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write"
-    assignable_scopes:
-        - "/subscriptions/3e93f1df-e6b0-4b70-a59d-e42f3becf381"
+  - name: create a role definition
+    azure_rm_roledefinition:
+      name: SAT-virtualmachineReader
+      scope: /subscriptions/3e93f1df-e6b0-4b70-a59d-e42f3becf381/resourceGroups/myresourceGroup
+      permissions:
+          - actions:
+              - "Microsoft.Compute/virtualMachines/read"
+            data_actions:
+              - "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write"
+      assignable_scopes:
+          - "/subscriptions/3e93f1df-e6b0-4b70-a59d-e42f3becf381"
+
