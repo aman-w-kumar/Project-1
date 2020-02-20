@@ -4,7 +4,7 @@
   tasks:
 - name: Create a role definition
   azure_rm_roledefinition:
-    name: myTestRole
+    name: VirtualmachineReader
     scope: /subscriptions/3e93f1df-e6b0-4b70-a59d-e42f3becf381/resourceGroups/Migration-RG
     permissions:
         - actions:
