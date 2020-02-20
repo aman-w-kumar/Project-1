@@ -3,7 +3,7 @@
   tasks:
   - name: create a role definition
     azure_rm_roledefinition:
-      name: SAT-VirtualmachineReader
+      name: VirtualmachineReaderrole
       scope: /subscriptions/3e93f1df-e6b0-4b70-a59d-e42f3becf381/resourceGroups/myresourceGroup
       permissions:
           - actions:
